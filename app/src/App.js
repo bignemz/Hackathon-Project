@@ -1,21 +1,16 @@
-import React from 'react';
-import { BrowserRouter ,Routes,Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./Pages/Homepage/Homepage";
-import Layoutpage from "./Pages/Layoutpage/Layoutpage";
-import Navbar from './Components/Navbar/Navbar';
+import RegisterPage from "./Pages/RegisterPage/RegisterPage";
 
 function App() {
   return (
     <BrowserRouter>
-    <Routes>
-   
-       
-            <Route path='/' element={<Homepage/>}/>
-          
-         
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/register" element={<RegisterPage />} />
+      </Routes>
     </BrowserRouter>
- 
   );
 }
 

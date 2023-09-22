@@ -1,119 +1,86 @@
 @import "../Variables";
 @import "../Mixins";
 
-.intro{
-    color: white;
-    .intro-highlight{
-        background-color: red;
+.intro {
+  color: white;
+  .intro-highlight {
+    background-color: red;
+    position: relative;
+
+    .intro-highlight1 {
+      position: absolute;
+      left: 55%;
+      h1 {
+        font-size: 36px;
+        line-height: 43.88px;
+      }
+      img {
         position: relative;
-
-        
-  
-        .intro-highlight1{
-            
-          
-            position: absolute;
-            left:55%;
-            h1{
-                font-size: 36px;
-                line-height: 43.88px;
-            }
-            img{
-
-                position: relative;
-                left: 60%;
-                width: 30%;
-
-            }
-        }
-      
-       
-
-
-       
+        left: 60%;
+        width: 30%;
+      }
     }
-       
-    .intro-sub{
-        display: flex;
-        padding: 20px;
-        padding-top: 200px;
-     
-         .intro-text{
-            .intro-text1{
+  }
 
-                h1{
-                    font-size:80px;
-                    span{
-                        color: $Regularpurple-color;
+  .intro-sub {
+    display: flex;
+    padding: 20px;
+    padding-top: 200px;
 
-                    }
-                    
-                }
-
-            }
-            .intro-text2{
-                p{
-                    font-size: 20px;
-                    
-                }
-                .register{
-                width: 172px;
-                height: 53px;
-                font-size: 20px;
-                    background-color: Linear-gradient(to right, #FE34B9, #903AFF);
-                    border-radius: 4px;
-                    padding: 2px;
-                    margin-right: 2px;
-                    margin-top: 44px;
-                }
-
-            }
-            .intro-time{
-                margin-top: 44px;
-                span{
-                    font-size: 64px;
-                }
-                
-
-            }
-
+    .intro-text {
+      .intro-text1 {
+        h1 {
+          font-size: 80px;
+          span {
+            color: $Regularpurple-color;
+          }
+        }
+      }
+      .intro-text2 {
+        p {
+          font-size: 20px;
+        }
+        .register {
+          width: 172px;
+          height: 53px;
+          font-size: 20px;
+          background-color: Linear-gradient(to right, #fe34b9, #903aff);
+          border-radius: 4px;
+          padding: 2px;
+          margin-right: 2px;
+          margin-top: 44px;
+        }
+      }
+      .intro-time {
+        margin-top: 44px;
+        span {
+          font-size: 64px;
+        }
+      }
     }
-    .intro-image{
-        position: relative;
+    .intro-image {
+      position: relative;
 
-        .intro-image1{
+      .intro-image1 {
+      }
+      .intro-image2 {
+        display: block;
 
-
+        img {
+          width: 50vw;
         }
-        .intro-image2{
-            display: block;
-          
-            img{
-                width: 50vw;
-
-            }
-
-          
-           
-
+      }
+      .intro-image3 {
+        // width: 100%;
+        position: absolute;
+        bottom: 3%;
+        img {
+          width: 40vw;
         }
-        .intro-image3{
-            // width: 100%;
-            position: absolute;
-            bottom: 3%;
-            img {
-                width: 40vw;
-            
-                }
-
-        }
-
-            
-        }
-
-
+      }
     }
+  }
 }
-.intro2{
-    padding-top: 10px;
+.intro2 {
+  padding-top: 10px;
 }

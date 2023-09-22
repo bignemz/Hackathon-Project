@@ -1,0 +1,263 @@
+@import "../../Components/Variables";
+@import "../../Components/Mixins";
+
+main {
+  min-height: calc(100vh - 93px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.star {
+  position: absolute;
+
+  &.star1 {
+    top: 10%;
+    left: 10%;
+  }
+  &.star2 {
+    right: 10%;
+  }
+  &.star3 {
+    bottom: 10%;
+    left: 10%;
+  }
+}
+
+.container-xl,
+.container-lg,
+.container-md {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  .container-lg {
+    max-width: $mediaLGWidth;
+  }
+
+  .container-md {
+    max-width: $mediaMDWidth;
+  }
+
+  @include mediaXL {
+    max-width: $mediaXLWidth;
+  }
+  @include mediaLG {
+    max-width: $mediaLGWidth;
+  }
+
+  @include mediaSM {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-flow: wrap;
+  margin-left: -15px;
+  width: calc(100% + 15px);
+  & > * {
+    padding-left: 15px;
+    padding-top: 15px;
+  }
+  .col {
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 100%;
+  }
+
+  .col-6 {
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+
+  @include mediaMD {
+    .col-md-6 {
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+    .col-md-12 {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+
+  @include mediaSM {
+    .col-sm-6 {
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+    .col-sm-12 {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+}
+
+.card {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  &.modal-card {
+    border-radius: 5px;
+    border: 1px solid #d434fe;
+    background: rgba(255, 255, 255, 0.01);
+  }
+
+  .cardContent {
+    padding: 65px 90px;
+    @include mediaLG {
+      padding: 65px 30px;
+    }
+  }
+}
+
+.stack-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-control {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  input,
+  select {
+    padding: 16.5px 14px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: inherit;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  .helper-text {
+    margin-top: 10px;
+  }
+}
+
+.image-container {
+  position: relative;
+
+  svg {
+    position: relative;
+    width: 100%;
+  }
+}
+
+.contained-btn {
+  outline: 0px;
+  border: 0px;
+  border-radius: 4px;
+  padding: 17px 10px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.register-btn {
+  background: linear-gradient(
+    270deg,
+    #903aff 0%,
+    #d434fe 56.42%,
+    #ff26b9 99.99%,
+    #fe34b9 100%
+  );
+  color: #fff;
+}
+
+@keyframes bounce1 {
+  0% {
+    transform: matrix(-1, 0, 0, 1, 69, 9);
+  }
+  100% {
+    transform: matrix(-1, 0, 0, 1, 69, 1); /* The image width */
+  }
+}
+
+@keyframes bounce2 {
+  0% {
+    transform: matrix(-1, 0, 0, 1, 44, 9);
+  }
+  100% {
+    transform: matrix(-1, 0, 0, 1, 44, 2); /* The image width */
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(-70px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100px, 0, 0); /* The image width */
+  }
+}
+
+.lineOfMove {
+  // width: 100%;
+  overflow-x: hidden;
+  #linePath {
+    animation: 5s ease infinite slide alternate;
+  }
+  #person1 {
+    animation: 1s linear infinite bounce1 alternate-reverse;
+  }
+  #person2 {
+    animation: 1.2s linear infinite bounce2 alternate-reverse;
+    animation-delay: 2s;
+  }
+}
+
+.modal {
+  background: rgba(21, 14, 40, 0.93);
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  z-index: 1300;
+  -webkit-box-pack: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+  }
+
+  .modal-content {
+    max-width: 700px;
+  }
+}
+
+.bePart {
+  display: flex;
+  align-items: flex-end;
+  svg {
+    margin-left: 10px;
+  }
+}
