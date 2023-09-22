@@ -48,15 +48,8 @@
 
 .nav-btn{
     .register{
-        width: 172px;
-        height: 53px;
-        font-size: 20px;
-        background-color:Linear-gradient(to right, #FE34B9, #903AFF);
-        border-radius: 4px;
-        padding: 2px;
-    
-        margin-right: 2px;
+        @include btn()
+   
     }
- 
 }
 }

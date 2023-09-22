@@ -28,7 +28,6 @@ function Navbar() {
         </div> 
 
 
-
        
     </nav>
   )

@@ -3,6 +3,7 @@
 
 .intro{
     color: white;
+   
     .intro-highlight{
         background-color: red;
         position: relative;
@@ -13,7 +14,7 @@
             
           
             position: absolute;
-            left:55%;
+            left:50%;
             h1{
                 font-size: 36px;
                 line-height: 43.88px;
@@ -21,8 +22,8 @@
             img{
 
                 position: relative;
-                left: 60%;
-                width: 30%;
+                left: 63%;
+                width: 35%;
 
             }
         }
@@ -34,11 +35,15 @@
     }
        
     .intro-sub{
-        display: flex;
-        padding: 20px;
+       
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         padding-top: 200px;
+        border-bottom: 1px solid rgb(62, 56, 56);
      
          .intro-text{
+            margin-left: 20px;
+           
             .intro-text1{
 
                 h1{
@@ -53,18 +58,13 @@
             }
             .intro-text2{
                 p{
-                    font-size: 20px;
+                     font-size: 14px;
                     
                 }
                 .register{
-                width: 172px;
-                height: 53px;
-                font-size: 20px;
-                    background-color: Linear-gradient(to right, #FE34B9, #903AFF);
-                    border-radius: 4px;
-                    padding: 2px;
-                    margin-right: 2px;
+                    @include btn();
                     margin-top: 44px;
+             
                 }
 
             }
@@ -81,16 +81,18 @@
     .intro-image{
         position: relative;
 
-        .intro-image1{
+       
+
+        // .intro-image1{
 
 
-        }
+        // }
         .intro-image2{
             display: block;
           
             img{
                 width: 50vw;
-
+                
             }
 
           
@@ -98,10 +100,10 @@
 
         }
         .intro-image3{
-            // width: 100%;
-            position: absolute;
-            bottom: 3%;
+          
             img {
+                position: absolute;
+                bottom: 33%;
                 width: 40vw;
             
                 }
@@ -116,4 +118,422 @@
 }
 .intro2{
     padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 80px;
+    border-bottom: 1px solid rgb(62, 56, 56);
+    .intro2-image{
+        img{
+            width: 40vw;
+        }
+     
+
+
+    }
+    .intro2-text{
+        color: white;
+        font-size: 14px;
+        span{
+            color: $Peachpurple-color;
+
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    
 }
+
+.intro3{
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 80px;
+    border-bottom: 1px solid rgb(62, 56, 56);
+    .intro3-image{
+        img{
+            width: 48vw;
+        }
+     
+
+
+    }
+    .intro3-text{
+        color: white;
+        span{
+            color: $Peachpurple-color;
+
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+  
+
+    }
+    
+}
+
+.intro4{
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 80px;
+    border-bottom: 1px solid rgb(62, 56, 56);
+    .intro4-image{
+        img{
+            width: 48vw;
+        }
+     
+
+
+    }
+    .intro4-text{
+
+        color: white;
+        span{
+            color: $Peachpurple-color;
+
+        }
+        p{
+            margin: 15px;
+        }
+        button{
+            @include btn();
+            margin-top: 20px;
+
+
+        }
+        
+     
+  
+
+    }
+    
+}
+.intro5{
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 80px;
+    border-bottom: 1px solid rgb(62, 56, 56);
+    .intro5-image{
+        img{
+            width: 48vw;
+        }
+     
+
+
+    }
+    .intro5-text{
+        color: white;
+        span{
+            color: $Peachpurple-color;
+
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .text1{
+            margin: 40px 0;
+            
+        }
+        .intro5-quest{
+            position: relative;
+            width: min(427px,100%);
+            height: 41px;
+
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid $Regularpurple-color;
+            margin-bottom: 10px ;
+            span{
+                position:absolute;
+                right: 10px;
+
+            }
+            
+            
+        }
+
+  
+
+    }
+    
+}
+
+
+.intro6{
+   
+  color: white;
+  padding: 80px;
+  border-bottom: 1px solid rgb(62, 56, 56);
+
+
+
+
+  .intro6-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+   
+  }
+  .intro6-para{
+    height: 100%;
+  }
+  .intro6-para1{
+  
+    margin:20px auto ;
+    span{
+        color: $Peachpurple-color;
+    }
+   
+   
+
+  }
+  .intro6-para1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min(927px,80%);
+    gap: 100px;
+    position: relative;
+    margin-top: 150px;
+  .intro6-header{
+    position: absolute;
+    right: 70%;
+    
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  
+  }
+  .intro6-mid{
+    position: absolute;
+    right: 48%;
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #FE34B9, #903AFF);
+  
+  }
+  .intro6-mid h3 {
+
+    position: relative;
+
+  }
+   .one :before {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: 25%;
+    height: 80px;
+    width: 20px;
+    width: 4px;
+    background: linear-gradient(to right, $Peachpurple-color, #903AFF);
+  
+  }
+  .one ::after {
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: 25%;
+    height: 100px;
+    width: 20px;
+    width: 4px;
+    background: linear-gradient(to right, $Peachpurple-color, #903AFF);
+  
+  }
+  .two :before {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: 25%;
+    height: 80px;
+    width: 20px;
+    width: 4px;
+    background: linear-gradient(to right, $Peachpurple-color, #903AFF);
+  
+  }
+  .three :before {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: 25%;
+    height: 80px;
+    width: 20px;
+    width: 4px;
+    background: linear-gradient(to right, $Peachpurple-color, #903AFF);
+  
+  }
+  .four :before {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: 25%;
+    height: 80px;
+    width: 20px;
+    width: 4px;
+    background: linear-gradient(to right, $Peachpurple-color, #903AFF);
+  
+  }
+  .five :before {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: 25%;
+    height: 80px;
+    width: 20px;
+    width: 4px;
+    background: linear-gradient(to right, $Peachpurple-color, #903AFF);
+  
+  }
+  
+ 
+  .intro6-tail{
+    position: absolute;
+    left: 70%;
+   
+  }
+  }
+
+    
+}
+
+.intro7{
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 80px;
+
+    border-bottom: 1px solid rgb(62, 56, 56);
+    .intro7-image{
+        img{
+            width: 40vw;
+        }
+     
+
+
+    }
+    .intro7-text{
+        color: white;
+        font-size: 14px;
+        span{
+            color: $Peachpurple-color;
+
+        }
+        .intro7-prize{
+            margin-left: 80px;
+          
+        }
+
+        .intro7-medal{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            width: 100%;
+            text-align: center;
+            margin-top: 250px;
+          
+            .intro7-image{
+                width: 48vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+          
+            .intro7-medal1{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                width: 90%;
+                margin: 0 auto;
+                height: 280px;
+                border:0.8px solid $Peachpurple-color ;
+                border-radius: 8px;
+                background-color:rgb(212, 52, 254,0.1);
+
+                img{
+                    position:absolute;
+                    top: -110px;
+                    width: 100%;
+
+                }
+               
+
+            }
+            
+
+        }      
+        .intro7-medal1:hover{
+            width: 100%;
+            height: 285px;  
+            border:0.8px solid $Regularpurple-color ;
+            background-color: rgb(144, 58, 255,0.1);
+            img{
+                width: 105%;
+            }
+            
+        
+
+
+    }
+        
+        
+
+
+    }
+    
+}
+
+.intro8{
+   
+    color: white;
+    padding: 80px;
+    border-bottom: 1px solid rgb(62, 56, 56);
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+  
+  
+  
+  
+    .intro8-text{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+     
+    }
+    .intro8-para{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      padding: 40px;
+      width: 100%;
+      margin-top: 30px;
+
+   
+      
+    }
+   
+    .intro8-para1{
+        margin: auto 10px;
+        padding: 10px;
+        img{
+            width: 50%;
+            height: 80%;
+        }
+
+    
+    }
+  
+      
+  }
