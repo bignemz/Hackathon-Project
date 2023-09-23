@@ -1,9 +1,11 @@
 import React from "react";
+import * as Yup from "yup";
+import { Formik } from "formik";
+import { toast } from "react-toastify";
 
 import { ReactComponent as PartofMove } from "../../SVGComponents/Part of move.svg";
-import { Formik } from "formik";
-import * as Yup from "yup";
 import useFetchData from "../../hooks/useFetchData";
+import axiosInstance from "../../hooks/axiosInstance";
 
 const RegisterForm = ({ setModal }) => {
   const { apiData: categories } = useFetchData(
@@ -23,7 +25,7 @@ const RegisterForm = ({ setModal }) => {
             privacy_policy_accepted: false,
           }}
           validationSchema={Yup.object().shape({
-            email: Yup.string().required("Team name is required"),
+            email: Yup.string().required("Email is required"),
             phone_number: Yup.string().required("Phone Number is required"),
             team_name: Yup.string().required("Team Name is required"),
             group_size: Yup.string().required("Group Size is required"),
@@ -31,12 +33,27 @@ const RegisterForm = ({ setModal }) => {
             category: Yup.string().required("Category is required"),
             privacy_policy_accepted: Yup.boolean().isTrue(),
           })}
-          onSubmit={(values) => {
-            alert(JSON.stringify(values));
-            setModal(true);
+          onSubmit={async (values, { resetForm }) => {
+            try {
+              await axiosInstance.post("/hackathon/registration", values);
+              setModal(true);
+              resetForm();
+            } catch (error) {
+              const errorMessage = error?.response?.data
+                ? Object.values(error?.response?.data)[0][0]
+                : error.message;
+              toast.error(errorMessage);
+            }
           }}
         >
-          {({ values, errors, touched, handleSubmit, handleChange }) => (
+          {({
+            values,
+            errors,
+            touched,
+            handleSubmit,
+            handleChange,
+            isSubmitting,
+          }) => (
             <form noValidate onSubmit={handleSubmit}>
               <div className="stack-column">
                 <h2 className="text-primary">Register</h2>
@@ -118,7 +135,7 @@ const RegisterForm = ({ setModal }) => {
                     </div>
                   </div>
 
-                  <div className="col-6 col-md-12">
+                  <div className="col-6">
                     <div className="form-control">
                       <label>Category</label>
                       <select
@@ -141,16 +158,14 @@ const RegisterForm = ({ setModal }) => {
                     </div>
                   </div>
 
-                  <div className="col-6 col-md-12">
+                  <div className="col-6">
                     <div className="form-control">
-                      <label
+                      <label>Group Size</label>
+                      <select
                         name="group_size"
                         onChange={handleChange}
                         value={values?.group_size}
                       >
-                        Group Size
-                      </label>
-                      <select>
                         <option>Select</option>
                         {Array(10)
                           .fill()
@@ -179,7 +194,7 @@ const RegisterForm = ({ setModal }) => {
                   <label>
                     <input
                       name="privacy_policy_accepted"
-                      value={values.privacy_policy_accepted}
+                      value={values?.privacy_policy_accepted}
                       onChange={handleChange}
                       type="checkbox"
                     />
@@ -192,9 +207,9 @@ const RegisterForm = ({ setModal }) => {
 
                 <div>
                   <button
-                    className="contained-btn register-btn"
+                    className="contained-btn register-btn w-full"
                     type="submit"
-                    disabled={!values?.privacy_policy_accepted}
+                    disabled={!values?.privacy_policy_accepted || isSubmitting}
                   >
                     Register Now
                   </button>

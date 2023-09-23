@@ -22,7 +22,7 @@ function Navbar() {
         <Link className="link" to="">
           FAQs
         </Link>
-        <Link className="link" to="">
+        <Link className="link" to="/contact">
           Contact
         </Link>
       </div>

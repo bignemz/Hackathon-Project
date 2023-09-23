@@ -23,137 +23,6 @@ main {
   }
 }
 
-.container-xl,
-.container-lg,
-.container-md {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  padding-left: 16px;
-  padding-right: 16px;
-
-  .container-lg {
-    max-width: $mediaLGWidth;
-  }
-
-  .container-md {
-    max-width: $mediaMDWidth;
-  }
-
-  @include mediaXL {
-    max-width: $mediaXLWidth;
-  }
-  @include mediaLG {
-    max-width: $mediaLGWidth;
-  }
-
-  @include mediaSM {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
-
-.row {
-  display: flex;
-  flex-flow: wrap;
-  margin-left: -15px;
-  width: calc(100% + 15px);
-  & > * {
-    padding-left: 15px;
-    padding-top: 15px;
-  }
-  .col {
-    flex-grow: 0;
-    flex-shrink: 0;
-    max-width: 100%;
-  }
-
-  .col-6 {
-    max-width: 50%;
-    flex-basis: 50%;
-  }
-
-  @include mediaMD {
-    .col-md-6 {
-      max-width: 50%;
-      flex-basis: 50%;
-    }
-    .col-md-12 {
-      flex-basis: 100%;
-      max-width: 100%;
-    }
-  }
-
-  @include mediaSM {
-    .col-sm-6 {
-      max-width: 50%;
-      flex-basis: 50%;
-    }
-    .col-sm-12 {
-      max-width: 100%;
-      flex-basis: 100%;
-    }
-  }
-}
-
-.card {
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.03);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  &.modal-card {
-    border-radius: 5px;
-    border: 1px solid #d434fe;
-    background: rgba(255, 255, 255, 0.01);
-  }
-
-  .cardContent {
-    padding: 65px 90px;
-    @include mediaLG {
-      padding: 65px 30px;
-    }
-  }
-}
-
-.stack-column {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.form-control {
-  display: inline-flex;
-  flex-direction: column;
-  width: 100%;
-  position: relative;
-
-  label {
-    margin-bottom: 10px;
-  }
-
-  input,
-  select {
-    padding: 16.5px 14px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: normal;
-    margin: 0;
-    border-radius: 4px;
-    border: 1px solid #fff;
-    background: rgba(255, 255, 255, 0.03);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    color: inherit;
-  }
-
-  input[type="checkbox"] {
-    margin-right: 10px;
-  }
-
-  .helper-text {
-    margin-top: 10px;
-  }
-}
-
 .image-container {
   position: relative;
 
@@ -167,8 +36,7 @@ main {
   outline: 0px;
   border: 0px;
   border-radius: 4px;
-  padding: 17px 10px;
-  width: 100%;
+  padding: 17px 50px;
   font-size: 16px;
   font-weight: 400;
   line-height: normal;

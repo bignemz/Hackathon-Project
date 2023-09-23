@@ -1,0 +1,8 @@
+@import "../../Components/Variables";
+@import "../../Components/Mixins";
+
+.getInTouch {
+  @include mediaMD {
+    display: none;
+  }
+}
