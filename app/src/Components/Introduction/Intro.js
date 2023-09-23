@@ -3,7 +3,7 @@ import './Intro.scss'
 
 function Intro() {
   return (
-    <div>
+    <div className='intro-sec'>
      <section className='intro'>
         <div className='intro-highlight'>
             <div className='intro-highlight1'><h1>Igniting a Revolution in HR Innovation</h1>
@@ -13,7 +13,7 @@ function Intro() {
         <div className='intro-sub'>
              <div className='intro-text'>
             <div className='intro-text1'>
-                <div> <img src="./HackImages/IconImage/Underline.png" alt=""/></div>
+                <div className='bulb'> <img src="./HackImages/IconImage/bulb.png" alt=""/></div>
                 <h1>getlinked Tech</h1>
                 <h1>Hackathon  <span>1.0</span><span>  <img src="./HackImages/IconImage/Chain.png" alt=""/>  <img src="./HackImages/IconImage/Spark.png" alt=""/></span></h1>
             </div>
@@ -130,51 +130,51 @@ function Intro() {
    
      <div className='intro6-para'>
         <div className='intro6-para1'>
-            <div className='intro6-header'>
-                <h2><span>Hackathon Announcement</span></h2>
+            <div className='intro6-header  note'>
+                <h1><span>Hackathon Announcement</span></h1>
                 <p>The getlinked tech hackathon 1.0 is formally announcedto the general public and teams begin to get ready to register</p>
             </div>
             <div className='intro6-mid one'><h3>1</h3></div>
-            <div className='intro6-tail'><h2><span>November 18, 2023</span></h2></div>
+            <div className='intro6-tail date'><h1><span>November 18, 2023</span></h1></div>
         </div>
         <div className='intro6-para1'>
-        <div className='intro6-header'>
-        <h2><span>November 18, 2023</span></h2>
+        <div className='intro6-header date'>
+        <h1><span>November 18, 2023</span></h1>
             </div>
             <div className='intro6-mid two'><h3>2</h3></div>
-            <div className='intro6-tail'><h2><span>Teams Registration begins</span></h2>
+            <div className='intro6-tail note'><h1><span>Teams Registration begins</span></h1>
                 <p>Interested teams can now show their interest in the getlinked tech hackathon 1.0 2023 by proceeding to register</p></div>
         </div>
         <div className='intro6-para1'>
-        <div className='intro6-header'>
-                <h2><span>Teams Registration ends</span></h2>
+        <div className='intro6-header note'>
+                <h1><span>Teams Registration ends</span></h1>
                 <p>Interested Participants are no longer Allowed to register</p>
             </div>
             <div className='intro6-mid three'><h3>3</h3></div>
-            <div className='intro6-tail'><h2><span>November 18, 2023</span></h2></div>
+            <div className='intro6-tail date'><h1><span>November 18, 2023</span></h1></div>
         </div>
         <div className='intro6-para1'>
         <div>
-        <h2 className='intro6-header'><span>November 18, 2023</span></h2>
+        <h1 className='intro6-header date'><span>November 18, 2023</span></h1>
             </div>
             <div className='intro6-mid four' ><h3>4</h3></div>
-            <div className='intro6-tail'><h2><span>Announcement of the accepted teams and ideas</span></h2>
+            <div className='intro6-tail note'><h1><span>Announcement of the accepted teams and ideas</span></h1>
                 <p>All teams whom idea has been accepted into getlinked tech hackathon 1.0 2023 are formally announced</p></div>
         </div>
         <div className='intro6-para1'>
-        <div className='intro6-header'>
-                <h2><span>Getlinked Hackathon 1.0 Offically Beginst</span></h2>
+        <div className='intro6-header note'>
+                <h1><span>Getlinked Hackathon 1.0 Offically Beginst</span></h1>
                 <p>Accepted teams can now proceed to build their  ground breaking skill driven solutions</p>
             </div>
             <div className='intro6-mid five'><h3>5</h3></div>
-            <div className='intro6-tail'><h2><span>November 18, 2023</span></h2></div>
+            <div className='intro6-tail date'><h1><span>November 18, 2023</span></h1></div>
         </div>
         <div className='intro6-para1'>
-        <div className='intro6-header'>
-        <h2><span>November 18, 2023</span></h2>
+        <div className='intro6-header date'>
+        <h1><span>November 18, 2023</span></h1>
             </div>
             <div className='intro6-mid' ><h3>6</h3></div>
-            <div className='intro6-tail'><h2><span>Demo Day</span></h2>
+            <div className='intro6-tail note'><h1><span>Demo Day</span></h1>
                 <p>Teams get the opportunity to pitch their projects to judges.The winner of the hackathon will also be announced on this day</p></div>
         </div>
             
@@ -254,6 +254,77 @@ companies as its partners and sponsors</p>
            
         </div>
 </section>
+
+<section className='intro9'>
+    
+    <div className='intro9-text'>
+        <h1>Privacy Policy and 
+
+        <span>Terms</span></h1>
+        <p>Last updated on September 12, 2023</p>
+        <p>Below are our privacy & policy, which outline a lot of goodies. 
+it’s our aim to always take of our participant</p>
+
+        <div className='intro9-text1' >
+            <p>At getlinked tech Hackathon 1.0, we value your privacy
+and are committed to protecting your personal information.
+This Privacy Policy outlines how we collect, use, disclose, 
+and safeguard your data when you participate in our tech 
+hackathon event. By participating in our event, you consent 
+to the practices described in this policy.</p>
+
+<h2><span>Licensing Policy</span></h2>
+<h3>Here are terms of our Standard License:</h3>
+<p><span>+</span>The Standard License grants you a non-exclusive right to
+navigate and register for our event</p>
+<p><span>+</span>You are licensed to use the item available at any free source
+sites, for your project developement</p>
+<button className='read-more'>Read more</button>
+        </div>
+
+
+     </div>
+    
+   
+     <div className='intro9-image'>
+        <div className='intro9-shield'> <img src="./HackImages/shield.png" alt=""/></div>
+        <div className='intro9-lock'><img src="./HackImages/lock.png" alt=""/></div>
+
+           
+        </div>
+</section>
+
+<section className='intro10'>
+    
+    <div className='intro10-text'>
+
+    <div className='intro10-image'>
+        <div className='intro10-shield'><h1> get<span>linked</span></h1></div>
+        <div className='intro10-lock'><p>Getlinked Tech Hackathon is a technology innovation program 
+established by a group of organizations with the aim of showcasing 
+young and talented individuals in the field of technology</p></div>
+
+           
+        </div>
+
+        <div className='intro10-image'>
+        <div className='intro10-shield'> <img src="./HackImages/shield.png" alt=""/></div>
+        <div className='intro10-lock'><img src="./HackImages/lock.png" alt=""/></div>
+
+           
+        </div>
+
+        <div className='intro10-image'>
+        <div className='intro10-shield'> <img src="./HackImages/shield.png" alt=""/></div>
+        <div className='intro10-lock'><img src="./HackImages/lock.png" alt=""/></div>
+
+           
+        </div>
+    
+           
+        </div>
+</section>
+
 
     </div>
 

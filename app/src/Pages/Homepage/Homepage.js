@@ -7,7 +7,7 @@ import Intro from '../../Components/Introduction/Intro'
 function Homepage() {
   return (
     <div className='Home'>
-       <Navbar/>
+       {/* <Navbar/> */}
       <Intro/>
        
     </div>

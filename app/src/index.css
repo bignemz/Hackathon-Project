@@ -1,7 +1,9 @@
+
 @font-face {
-  font-family: Monteserrat;
-  src: url(./Montserrat-Regular.ttf);
+  font-family: Clash;
+  src: url(./ClashDisplay-Regular.ttf);
 }
+
 
 * {
   box-sizing: border-box;
@@ -17,6 +19,7 @@ body {
   padding: 0;
   background-color: #150E28;
   color: white;
+  font-family: 'Montserrat', sans-serif;
 
  
   
