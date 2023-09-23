@@ -1,0 +1,267 @@
+@import "./Components/Variables";
+@import "./Components/Mixins";
+
+@font-face {
+  font-family: Monteserrat;
+  src: url(./Montserrat-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  background-color: #150e28;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 1.3rem;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+.text-primary {
+  color: $Peachpurple-color;
+}
+.text-white {
+  color: #fff;
+}
+
+.text-danger {
+  color: rgb(236, 73, 73);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-primary {
+  background-color: $Peachpurple-color !important;
+}
+
+.bg-transparent {
+  background: transparent !important;
+}
+
+button {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+button:disabled {
+  color: rgba(0, 0, 0, 0.26) !important;
+  box-shadow: none !important;
+  background: rgba(0, 0, 0, 0.12) !important;
+}
+
+.container-xl,
+.container-lg,
+.container-md {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  &.container-lg {
+    max-width: $mediaLGWidth;
+  }
+
+  &.container-md {
+    max-width: $mediaMDWidth;
+  }
+
+  @include mediaXL {
+    max-width: $mediaXLWidth;
+  }
+  @include mediaLG {
+    max-width: $mediaLGWidth;
+  }
+
+  @include mediaSM {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-flow: wrap;
+  margin-left: -15px;
+  width: calc(100% + 15px);
+  & > * {
+    padding-left: 15px;
+    padding-top: 15px;
+  }
+  .col {
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 100%;
+  }
+
+  .col-6 {
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+
+  @include mediaMD {
+    .col-md-6 {
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+    .col-md-12 {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+
+  @include mediaSM {
+    .col-sm-6 {
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+    .col-sm-12 {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+}
+
+.card {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  &.modal-card {
+    border-radius: 5px;
+    border: 1px solid #d434fe;
+    background: rgba(255, 255, 255, 0.01);
+  }
+
+  @include mediaMD {
+    background: transparent;
+    &.modal-card {
+      border: none;
+      background: transparent;
+    }
+  }
+
+  .cardContent {
+    padding: 65px 90px;
+    @include mediaLG {
+      padding: 65px 30px;
+    }
+  }
+}
+
+.form-control {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 16.5px 14px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: inherit;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  .helper-text {
+    margin-top: 10px;
+  }
+}
+
+select option {
+  background-color: $Darkpurple-color;
+  color: #fff;
+  border: 0;
+  outline: none;
+}
+
+.icon-button {
+  display: inline-flex;
+  border-radius: 50%;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  font-size: 1.5rem;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+
+  & svg path {
+    transition: all 0.5s ease;
+  }
+
+  &:hover svg path {
+    fill: $Peachpurple-color;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.stack-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stack-row {
+  display: flex;
+  flex-direction: row;
+
+  &.al-center {
+    align-items: center;
+  }
+  &.j-center {
+    justify-content: center;
+  }
+}
+
+.w-full {
+  width: 100%;
+}
+
+@include generate(ml, margin-left);
+@include generate(mt, margin-top);
+@include generate(g, gap);

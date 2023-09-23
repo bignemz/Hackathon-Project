@@ -294,7 +294,7 @@ sites, for your project developement</p>
         </div>
 </section>
 
-<section className='intro10'>
+{/* <section className='intro10'>
     
     <div className='intro10-text'>
 
@@ -304,6 +304,12 @@ sites, for your project developement</p>
 established by a group of organizations with the aim of showcasing 
 young and talented individuals in the field of technology</p></div>
 
+<div>
+    <u1>
+        <l1></l1>
+    </u1>
+</div>
+
            
         </div>
 
@@ -323,7 +329,7 @@ young and talented individuals in the field of technology</p></div>
     
            
         </div>
-</section>
+</section> */}
 
 
     </div>

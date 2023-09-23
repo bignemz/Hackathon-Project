@@ -1,17 +1,17 @@
 @import "../Variables";
 @import "../Mixins";
 
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: white;
 
-.navbar{
-    position: sticky;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    color: white;
-   
+ 
    
 
 
@@ -55,14 +55,33 @@
 
             }
         
-
+    gap: 20px;
+    font-family: Monteserrat;
+    @include mediaMD {
+      display: none;
     }
-  
+
+    .link {
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+  }
+  .nav-logo {
+    font-size: 36px;
+    font-family: Monteserrat;
+    font-weight: 700;
 
 .nav-btn{
     .register{
         @include btn()
    
     }
+    span {
+      color: $Peachpurple-color;
+    }
+  }
+
+
 }
 }
