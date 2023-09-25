@@ -13,6 +13,7 @@ function Navbar() {
       </div>
 
       <div className="nav-links">
+      
         <Link className="link" to="/">
           Timeline
         </Link>
@@ -25,13 +26,17 @@ function Navbar() {
         <Link className="link" to="/contact">
           Contact
         </Link>
-      </div>
+     
+    
 
-      <div className="nav-btn">
+        <div className="nav-btn">
         <Link to="/register">
           <button className="register">Register</button>
         </Link>
       </div>
+      </div>
+
+   
     </nav>
   );
 }

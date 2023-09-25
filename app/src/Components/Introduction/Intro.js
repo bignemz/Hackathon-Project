@@ -294,42 +294,6 @@ sites, for your project developement</p>
         </div>
 </section>
 
-{/* <section className='intro10'>
-    
-    <div className='intro10-text'>
-
-    <div className='intro10-image'>
-        <div className='intro10-shield'><h1> get<span>linked</span></h1></div>
-        <div className='intro10-lock'><p>Getlinked Tech Hackathon is a technology innovation program 
-established by a group of organizations with the aim of showcasing 
-young and talented individuals in the field of technology</p></div>
-
-<div>
-    <u1>
-        <l1></l1>
-    </u1>
-</div>
-
-           
-        </div>
-
-        <div className='intro10-image'>
-        <div className='intro10-shield'> <img src="./HackImages/shield.png" alt=""/></div>
-        <div className='intro10-lock'><img src="./HackImages/lock.png" alt=""/></div>
-
-           
-        </div>
-
-        <div className='intro10-image'>
-        <div className='intro10-shield'> <img src="./HackImages/shield.png" alt=""/></div>
-        <div className='intro10-lock'><img src="./HackImages/lock.png" alt=""/></div>
-
-           
-        </div>
-    
-           
-        </div>
-</section> */}
 
 
     </div>

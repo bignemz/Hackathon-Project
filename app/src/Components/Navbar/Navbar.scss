@@ -7,11 +7,13 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  // gap: 100px;
   align-items: center;
   padding: 20px;
   color: white;
 
- 
+  
+   
    
 
 
@@ -19,14 +21,18 @@
     .nav-links{
         font-size: 16px;
         display: flex;
-        gap: 80px;
+        width: 70%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 100px;
+
+      
      
 
         .link{
             color: white;
             text-decoration: none;
             font-weight: bold;
-          
             transition: color 0.3s;
             position: relative;
         
@@ -57,9 +63,9 @@
         
     gap: 20px;
     font-family: Monteserrat;
-    @include mediaMD {
-      display: none;
-    }
+    // @include mediaMD {
+    //   display: none;
+    // }
 
     .link {
       text-decoration: none;
@@ -70,18 +76,269 @@
   .nav-logo {
     font-size: 36px;
     font-family: Monteserrat;
-    font-weight: 700;
+    font-weight: 700;}
 
 .nav-btn{
     .register{
         @include btn()
    
     }
-    span {
-      color: $Peachpurple-color;
-    }
-  }
-
+}
 
 }
+@media screen and (max-width: 1023px) {
+    .navbar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        color: white;
+      
+        
+         
+         
+      
+      
+      
+          .nav-links{
+              font-size:$plg;
+              display: flex;
+              gap: 50px;
+           
+      
+              .link{
+                  color: white;
+                  text-decoration: none;
+                  font-weight: bold;
+                
+                  transition: color 0.3s;
+                  position: relative;
+              
+              }
+              .link:hover::before{
+                  content: " ";
+                  width: 70px;
+                  height:10px ;
+                  position: absolute;
+                  top: 20px;
+                  border-bottom: 3px solid $Peachpurple-color ;
+              }
+      
+          
+        
+          }
+          .nav-logo{
+      
+              
+                  font-size:$Fontlg-h1;
+                  
+                  font-weight: 700;
+                   
+                  span{
+                      color: $Peachpurple-color;
+      
+                  }
+              
+          gap: 10px;
+          font-family: Monteserrat;
+        //   @include mediaMD {
+        //     display: none;
+        //   }
+      
+          .link {
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+          }
+        }
+        .nav-logo {
+          font-size: 36px;
+          font-family: Monteserrat;
+          font-weight: 700;}
+      
+      .nav-btn{
+          .register{
+              @include btn();
+              height:55px;
+              width:160px
+         
+          }
+      }
+      
+      }
+}
+@media screen and (max-width: 780px) {
+    .navbar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        color: white;
+      
+        
+         
+         
+      
+      
+      
+          .nav-links{
+              font-size: 16px;
+              display: flex;
+              gap: 80px;
+           
+      
+              .link{
+                  color: white;
+                  text-decoration: none;
+                  font-weight: bold;
+                
+                  transition: color 0.3s;
+                  position: relative;
+              
+              }
+              .link:hover::before{
+                  content: " ";
+                  width: 70px;
+                  height:10px ;
+                  position: absolute;
+                  top: 20px;
+                  border-bottom: 3px solid $Peachpurple-color ;
+              }
+      
+          
+        
+          }
+          .nav-logo{
+      
+              
+                  font-size: 36px;
+                  
+                  font-weight: 700;
+                   
+                  span{
+                      color: $Peachpurple-color;
+      
+                  }
+              
+          gap: 20px;
+          font-family: Monteserrat;
+        //   @include mediaMD {
+        //     display: none;
+        //   }
+      
+          .link {
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+          }
+        }
+        .nav-logo {
+          font-size: 36px;
+          font-family: Monteserrat;
+          font-weight: 700;}
+      
+      .nav-btn{
+        display: none;
+          // .register{
+          //   @include btn();
+          //   height:40px;
+          //   width:100px
+         
+          // }
+      }
+      
+      }
+}
+@media screen and (max-width: 480px) {
+    .navbar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        color: white;
+      
+        
+         
+         
+      
+      
+      
+          .nav-links{
+              font-size:8px;
+              display: flex;
+              gap: 10px;
+           
+      
+              .link{
+                  color: white;
+                  text-decoration: none;
+                  font-weight: bold;
+                
+                  transition: color 0.3s;
+                  position: relative;
+              
+              }
+              .link:hover::before{
+                  content: " ";
+                  width: 70px;
+                  height:10px ;
+                  position: absolute;
+                  top: 20px;
+                  border-bottom: 3px solid $Peachpurple-color ;
+              }
+      
+          
+        
+          }
+          .nav-logo{
+      
+              
+                  font-size: 6px;
+                  
+                  font-weight: 700;
+                   
+                  span{
+                      color: $Peachpurple-color;
+      
+                  }
+              
+          gap: 20px;
+          font-family: Monteserrat;
+        //   @include mediaMD {
+        //     display: none;
+        //   }
+      
+          .link {
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+          }
+        }
+        .nav-logo {
+          font-size: 8px;
+          font-family: Monteserrat;
+          font-weight: 700;}
+      
+      .nav-btn{
+          .register{
+            // @include btn();
+            // height:25px;
+            // width:70px;
+            // font-size:10px
+            display: none;
+            
+         
+          }
+      }
+      
+      }
 }
