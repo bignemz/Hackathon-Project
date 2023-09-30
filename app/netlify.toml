@@ -4,6 +4,6 @@
   base ="app/"
 
 [[redirects]]
-  from = "app/*"
+  from = "/*"
   to = "/index.html"
   status = 200
