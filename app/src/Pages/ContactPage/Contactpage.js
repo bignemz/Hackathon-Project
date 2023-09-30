@@ -17,7 +17,7 @@ function Contactpage() {
   const medium = useMediaQuery("(max-width: 900px)");
   return (
     <div>
-      <Navbar />
+      
       <main>
         <div className="container-lg">
           <div className="row">

@@ -1,33 +1,192 @@
-.footer{
-    padding: 70px;
-    color: white;
-    .footer-get{
+@import "../Variables";
+@import "../Mixins";
+
+
+
+
+
+
+    .footer{
+        font-family: "Montserrat",sans-serif;
+        padding: 70px;
+        color: white;
         
-    }
-    .footer-use{
-        gap: 10px;
+      
+        .footer-get{
+            padding-bottom: 30px;
+            h1{
+                span{
+                    color:$Peachpurple-color;
+                }
+            }
+    
+            p{
+                margin-top: 10px;
+                font-family: 'Times New Roman', Times, serif;
+    
+            }
+            .privacy{
+               padding-top: 20px;
+            }
+        }
+        .footer-use{
+            gap: 10px;
+            padding-bottom: 30px;
+            font-family: 'Times New Roman', Times, serif;
+           h5{
+            color: $Peachpurple-color;
+           }
+           p{
+            padding-top: 15px;
+            padding-bottom: 15px;
+           }
+    
+        }
         .follow{
             display: flex;
+            flex-direction: row;
+            align-items: center;
             gap: 10px;
+            width: 80%;
+            justify-content: space-between;
+            h5{
+                color: $Peachpurple-color;
+               }
+            .social{
+               img{
+                padding-left: 10px;
+               }
+            }
         }
-
+        .footer-contact{
+            padding-top: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            h5{
+                color: $Peachpurple-color;
+               }
+            .number{
+                display: flex;
+                padding-top: 8px;
+                padding-bottom: 8px;
+              
+                img{
+                    height: 20px;
+                    margin-right: 10px;
+                }
+    
+    
+            }
+            .mail{
+                display: flex;
+                padding-bottom: 8px;
+                img{
+                    height: 20px;
+                    margin-right: 10px;
+                }
+    
+            }
+    
+        }
+        .copyright{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 50px;
+        }
     }
-    .footer-contact{
-        .number{
+    
+    @media screen and (min-width: 481px) {
+        .footer{
+            font-family: "Montserrat",sans-serif;
+            padding: 40px;
+            color: white;
+           .footer1{
             display: flex;
+            justify-content: space-between;
+            align-content: flex-start;
+           }
+            // flex-direction: column;
           
-            img{
-                height: 20px;
+            .footer-get{
+                padding-bottom: 30px;
+                width: 300px;
+                h1{
+                    span{
+                        color:$Peachpurple-color;
+                    }
+                }
+        
+                p{
+                    margin-top: 10px;
+                    font-family: 'Times New Roman', Times, serif;
+        
+                }
+                .privacy{
+                   padding-top: 20px;
+                }
             }
-
-
-        }
-        .mail{
-            display: flex;
-            img{
-                height: 20px;
+            .footer-use{
+                gap: 10px;
+                padding-bottom: 30px;
+                font-family: 'Times New Roman', Times, serif;
+               h5{
+                color: $Peachpurple-color;
+               }
+               p{
+                padding-top: 15px;
+                padding-bottom: 15px;
+               }
+        
             }
-
+            .follow{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+                width: 80%;
+                justify-content: space-between;
+                h5{
+                    color: $Peachpurple-color;
+                   }
+                .social{
+                   img{
+                    padding-left: 10px;
+                   }
+                }
+            }
+            .footer-contact{
+                padding-top: 0px;
+                font-family: 'Times New Roman', Times, serif;
+                h5{
+                    color: $Peachpurple-color;
+                   }
+                .number{
+                    display: flex;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                  
+                    img{
+                        height: 20px;
+                        margin-right: 10px;
+                    }
+        
+        
+                }
+                .mail{
+                    display: flex;
+                    padding-bottom: 8px;
+                    img{
+                        height: 20px;
+                        margin-right: 10px;
+                    }
+        
+                }
+        
+            }
+            .copyright{
+                font-family: 'Times New Roman', Times, serif;
+                text-align: center;
+                margin-top: 50px;
+            }
         }
+        
     }
-}

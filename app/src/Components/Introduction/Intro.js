@@ -1,9 +1,69 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Intro.scss'
+import {motion, useAnimation} from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
-function Intro() {
+const Intro = ()=> {
+
+    const boxVariant={
+        visible:{ opacity:1, scale:1,transition:{duration: 0.5,delay:1} },
+        hidden:{ opacity:1, scale:0 }
+      }
+
+      const sizeVariant={
+        visible:{ opacity:1, scale:1,transition:{duration: 0.3 ,delay:0.5} },
+        hidden:{ opacity:1, scale:0 }
+      }
+
+      const slideVariant={
+        visible:{   initial:{y:1000} ,animate:{y:0}, transition:{duration:1,delay:0.5}}
+        
+        
+   
+      }
+    
+      const control= useAnimation()
+     const[ref,inView]=useInView()
+    
+      useEffect(()=>{
+    
+      if (inView) {
+        control.start("visible")
+      }
+
+     },[control,inView])
+
+   
+
+    const [Hour, SetHour] =useState(0)
+    const [Minute, SetMinute] =useState(0)
+    const [Second, SetSecond] =useState(0)
+
+
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+          const now = new Date();
+          SetHour(now.getHours());
+          SetMinute(now.getMinutes());
+          SetSecond(now.getSeconds());
+        }, 1000);
+    
+        return () => clearInterval(interval);
+      }, []);
+  
+
+    
+
+
+        
+
+
+
+    
+
   return (
-    <div className='intro-sec'>
+    <div  className='intro-sec'>
      <section className='intro'>
         <div className='intro-highlight'>
             <div className='intro-highlight1'><h1>Igniting a Revolution in HR Innovation</h1>
@@ -11,66 +71,103 @@ function Intro() {
         </div>
         
         <div className='intro-sub'>
-             <div className='intro-text'>
-            <div className='intro-text1'>
+             <motion.div
+            initial={{y:-1000}}
+            animate={{y:0}}
+            transition={{duration:0.5,delay:0.5}} className='intro-text'>
+            <div  className='intro-text1'>
                 <div className='bulb'> <img src="./HackImages/IconImage/bulb.png" alt=""/></div>
                 <h1>getlinked Tech</h1>
                 <h1>Hackathon  <span>1.0</span><span>  <img src="./HackImages/IconImage/Chain.png" alt=""/>  <img src="./HackImages/IconImage/Spark.png" alt=""/></span></h1>
             </div>
-            <div className='intro-text2'>
+            <div
+          
+             className='intro-text2'>
                 <p>Participate in getlinked tech Hackathon 2023 stand  a chance to win a Big prize</p>
                 <button className='register'>Register</button>
             </div>
-            <div className='intro-time'><span>00</span>H<span>00</span>M  <span>00</span>S  </div>
-        </div>
+            <div className='intro-time'><span>{Hour}</span>H<span>{Minute}</span>M  <span>{Second}</span>S  </div>
+        </motion.div>
          <div className='intro-image'> 
-            {/* <div className='intro-image1'><img src="./HackImages/image1.png" alt=""/></div> */}
-            <div >
+            
+            <motion.div
+            initial={{y:1000}}
+            animate={{y:0}}
+            transition={{duration:0.5,delay:0.5}}
+   >
                  <div className='intro-image2'><img src="./HackImages/image1.png" alt=""/></div>
                 <div className='intro-image3'><img src="./HackImages/Image 1.1.png" alt=""/></div>
-            </div>
+            </motion.div>
         </div>
         </div>
        
     </section>
     <section className='intro2'>
-        <div>
-            <div className='intro2-image'>
+        <div
+       
+        >
+ <motion.div
+     initial={{x:-1000}}
+     animate={{x:0}}
+     transition={{duration:0.5,delay:1}}
+   
+            
+            className='intro2-image'>
                 <img src="./HackImages/image2.png" alt=""/>
                
-            </div>
+            </motion.div>
         </div>
-         <div className='intro2-text'>
+        <motion.div
+    ref={ref}
+    variants={slideVariant}
+    animate={control}
+    initial="hidden"
+       
+     
+    className='intro2-text' id='overview'>
             <h1>Introduction to getlinked
 <span>tech Hackathon 1.0 </span></h1>
             <p>Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you're a coding genius, a design maverick, or a concept wizard, you'll have the chance to transform your ideas into reality. Solving real-world problems, pushing the boundaries of technology, and creating solutions that can change the world, that's what we're all about!</p>
-         </div>
+         </motion.div>
     </section>
 
     <section className='intro3'>
     
-        <div className='intro3-text'>
+        <motion.div
+          ref={ref}
+          variants={slideVariant}
+          animate={control}
+          
+        className='intro3-text'>
             <h1>Introduction to getlinked
             <span>tech Hackathon 1.0 </span></h1>
             <p>Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you're a coding genius, a design maverick, or a concept wizard, you'll have the chance to transform your ideas into reality. Solving real-world problems, pushing the boundaries of technology, and creating solutions that can change the world, that's what we're all about!</p>
-         </div>
+         </motion.div>
         
        
-         <div className='intro3-image'>
+         <motion.div
+    ref={ref}
+    variants={boxVariant}
+    animate={control}
+    initial="hidden"
+         className='intro3-image'>
                 <img src="./HackImages/image3.png" alt=""/>
                
-            </div>
+            </motion.div>
     </section>
 
-    <section className='intro4'>
+    <section
+        className='intro4'>
     
-    <div className='intro4-image'>
+    <motion.div
+        className='intro4-image'>
             <img src="./HackImages/image4.png" alt=""/>
            
-        </div>
+        </motion.div>
     
    
-        <div className='intro4-text'>
+        <motion.div
+       className='intro4-text'>
             <h1>Introduction to getlinked
             <span>tech Hackathon 1.0 </span></h1>
             <p><span>Innovation and Creativity:</span> Evaluate the uniqueness and creativity of the solution. Consider whether it addresses a real-world problem in a novel way or introduces innovative features.</p>
@@ -82,11 +179,12 @@ function Intro() {
 
             <button className='register'>Register</button>
             
-         </div>
+         </motion.div>
     </section>
     <section className='intro5'>
     
-    <div className='intro5-text'>
+    <motion.div
+        className='intro5-text' id='FAQs' >
         <h1>Frequently Ask<span>Question </span></h1>
         <p className='text1'>We got answers to the questions that you might want to ask about getlinked Hackathon 1.0!</p>
 
@@ -111,24 +209,27 @@ function Intro() {
         
 
 
-     </div>
+     </motion.div>
     
    
-     <div className='intro5-image'>
+     <motion.div
+        className='intro5-image'>
             <img src="./HackImages/image6.png" alt=""/>
            
-        </div>
+        </motion.div>
 </section>
 
 <section className='intro6'>
     
-    <div className='intro6-text'>
+    <motion.div
+      className='intro6-text'  id='Timeline'>
         <h1>Timeline</h1>
         <p>Here is the breakdown of the time we anticipate using for the upcoming event.</p>
-     </div>
+     </motion.div>
     
    
-     <div className='intro6-para'>
+     <motion.div
+         className='intro6-para'>
         <div className='intro6-para1'>
             <div className='intro6-header  note'>
                 <h1><span>Hackathon Announcement</span></h1>
@@ -179,9 +280,10 @@ function Intro() {
         </div>
             
            
-        </div>
+        </motion.div>
 </section>
-<section className='intro7'>
+<motion.section
+    className='intro7'>
         <div>
             <div className='intro7-image'>
                 <img src="./HackImages/image7.png" alt=""/>
@@ -204,7 +306,7 @@ function Intro() {
                 <img src="./HackImages/image10.png" alt=""/>
                 <h1>1st</h1>
                 <h3>Runner</h3>
-                <h1>N300,000</h1>
+                <h1>N400,000</h1>
                 </div>
              <div className='intro7-medal1 bronze' >
                 <img src="./HackImages/image9.png" alt=""/>
@@ -214,8 +316,9 @@ function Intro() {
                 </div>
                </div> 
          </div>
-    </section>
-    <section className='intro8'>
+    </motion.section>
+    <motion.section
+   className='intro8'>
     
     <div className='intro8-text'>
         <h1>Partners and Sponsors</h1>
@@ -253,9 +356,10 @@ companies as its partners and sponsors</p>
             
            
         </div>
-</section>
+</motion.section>
 
-<section className='intro9'>
+<motion.section
+     className='intro9'>
     
     <div className='intro9-text'>
         <h1>Privacy Policy and 
@@ -292,7 +396,7 @@ sites, for your project developement</p>
 
            
         </div>
-</section>
+</motion.section>
 
 
 
@@ -302,5 +406,6 @@ sites, for your project developement</p>
 
   )
 }
+
 
 export default Intro

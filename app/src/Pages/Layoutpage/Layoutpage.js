@@ -6,10 +6,11 @@ import Footer from '../../Components/Footer/Footer';
 
 
 function Layoutpage() {
+  
   return (
     <div>
       <Navbar/>
-      <Outlet/>
+       <Outlet/>
       <Footer/>
     
      

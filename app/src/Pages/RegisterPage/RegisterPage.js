@@ -10,7 +10,7 @@ const RegisterPage = () => {
   const [modal, setModal] = useState(false);
   return (
     <div className="Register">
-      <Navbar />
+     
       <main>
         <div className="container-xl">
           <div className="row">

@@ -7,10 +7,12 @@
 
 .intro-sec{
     margin: 0 auto;
-    // background-color: aqua;
+   
+    
 }
 .intro{
     color: white;
+    font-family: Monteserrat;
    
     .intro-highlight{
         
@@ -23,6 +25,7 @@
           
             position: absolute;
             left:50%;
+            margin-top: 50px;
             h1{
                 font-size: $Fontlxl-h1;
                 line-height: 43.88px;
@@ -68,6 +71,11 @@
           
             .intro-text1{
                 position: relative;
+
+                img{
+                    width: 35px;
+                   
+                }
 
                 h1{
                     font-size:$Fontlxl-m;
@@ -121,6 +129,7 @@
        
 
         .intro-image2{
+            font-family: Monteserrat;
             img{
                 filter: grayscale(70%);
             }
@@ -196,6 +205,7 @@
     .intro2-text{
         color: white;
         font-size: 14px;
+        font-family: Monteserrat;
         span{
             color: $Peachpurple-color;
 
@@ -226,6 +236,7 @@
     grid-template-columns: 1fr 1fr;
     padding: 40px;
     border-bottom: 1px solid rgb(62, 56, 56);
+    font-family: Monteserrat;
     .intro3-image{
        
         img{
@@ -238,6 +249,7 @@
   
     .intro3-text{
         color: white;
+        font-family: Monteserrat;
         span{
             color: $Peachpurple-color;
 
@@ -301,6 +313,7 @@
     .intro4-text{
 
         color: white;
+        font-family: Monteserrat;
         span{
             color: $Peachpurple-color;
 
@@ -347,6 +360,7 @@
     }
     .intro5-text{
         color: white;
+        font-family: Monteserrat;
         span{
             color: $Peachpurple-color;
 
@@ -408,6 +422,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    font-family: Monteserrat;
     h1{
         font-size: $Fontlxl-h1;
         // font-family: Clash;
@@ -563,6 +578,7 @@
     .intro7-text{
         color: white;
         font-size: 14px;
+        font-family: Monteserrat;
         span{
             color: $Peachpurple-color;
 
@@ -661,6 +677,7 @@
       flex-direction: column;
       justify-content: center;
       text-align: center;
+      font-family: Monteserrat;
       h1{
         font-size: $Fontlxl-h1;
         // font-family: Clash;
@@ -705,6 +722,7 @@
     padding: 80px;
     padding-bottom: 240px;
     border-bottom: 1px solid rgb(62, 56, 56);
+    font-family: Monteserrat;
     .intro9-image{
         position: relative;
         padding: 60px;
@@ -729,6 +747,7 @@
     .intro9-text{
         color: white;
         padding-left: 80px;
+        font-family: Monteserrat;
         span{
             color: $Peachpurple-color;
 
@@ -757,6 +776,9 @@
         line-height: 35px;
         text-align: left;
         background-color:rgb(212, 52, 254,0.1);
+        button{
+            @include btn()
+        }
 
 
     }
@@ -766,7 +788,7 @@
 
 
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
     .intro-sec{
         margin: 0 auto;
        
@@ -1477,6 +1499,10 @@
         .intro9-text{
             color: white;
             padding-left: 80px;
+
+            button{
+                @include btn()
+            }
             span{
                 color: $Peachpurple-color;
     
@@ -1504,6 +1530,10 @@
             text-align: left;
             background-color:rgb(212, 52, 254,0.1);
     
+
+            .read-more{
+                @include btn()
+            }
     
         }
         }
@@ -1532,6 +1562,7 @@
             .intro-highlight1{
                 position: relative;
                 left: 0%;
+                padding-top: 100px;
                 text-align: center;
                 margin: 0 auto;
                 
@@ -1558,8 +1589,8 @@
                 img{
     
                     position: relative;
-                    left: 20%;
-                    width: 25%;
+                    left: 30%;
+                    width: 30%;
     
                 }
             }
@@ -1591,9 +1622,13 @@
               
                 .intro-text1{
                     position: relative;
+                    img{
+                        width: 35px;
+                       
+                    }
     
                     h1{
-                        font-size:$Fontmd-m;
+                        font-size:40;
                         span{
                             color: $Regularpurple-color;
     
@@ -1602,8 +1637,8 @@
                     }
                     .bulb img{
                         position: absolute;
-                        left: 65%;
-                        top:-20%;
+                        left: 63%;
+                        top:-30%;
     
                     }
     
@@ -1620,8 +1655,10 @@
                         // font-family: Clash;
                     }
                     p{
-                        font-size: 20px;
+                        font-size: 15px;
                         line-height: 22px;
+                        padding-left:40px;
+                        padding-right: 40px;
                      
             
                     }
@@ -2288,6 +2325,7 @@
         padding: 10px;
         margin-top: 50px ;
         margin-bottom: 50px ;
+        padding-bottom: 350px;
         text-align: center;
         border-bottom: 1px solid rgb(62, 56, 56);
         .intro9-image{
@@ -2305,9 +2343,7 @@
           
             }
          }
-         .intro9-shield{
-           
-         }
+    
     
     
         }
@@ -2342,9 +2378,9 @@
             text-align: left;
             background-color:rgb(212, 52, 254,0.1);
     
-    .read-more{
-        @include btn
-    }
+    // .read-more{
+    //     @include btn()
+    // }
         }
         }
         
@@ -2370,7 +2406,8 @@
       
             .intro-highlight1{
                 position: relative;
-                left: 0%;
+              
+                padding-top: 100px;
                 text-align: center;
                 margin: 0 auto;
                 
@@ -2380,7 +2417,7 @@
               
                 
                 h1{
-                    font-size: 20px;
+                    font-size: 15px;
                     width: 400;
                     line-height: 43.88px;
                     font-style: italic;
@@ -2389,7 +2426,7 @@
     
               
                 p{
-                    font-size: 20px;
+                    font-size: 10px;
                     line-height: 22px;
         
                 }
@@ -2398,7 +2435,7 @@
                 img{
     
                     position: relative;
-                    left: 32%;
+                    left: 25%;
                     width: 30%;
     
                 }
@@ -2432,6 +2469,7 @@
                     position: relative;
                     img{
                         width: 20px;
+          
                     }
     
                     h1{
@@ -2463,8 +2501,10 @@
                         // font-family: Clash;
                     }
                     p{
-                        font-size: 20px;
+                        font-size: 15px;
                         line-height: 22px;
+                        padding-left:40px;
+                        padding-right: 40px;
                      
             
                     }
@@ -2575,6 +2615,8 @@
         .intro2-text{
             color: white;
             font-size: 14px;
+            padding: 40px;
+            text-align: center;
             span{
                 color: $Peachpurple-color;
     
@@ -2590,6 +2632,7 @@
             p{
                 font-size: $pmd;
                 line-height: 22px;
+                
     
             }
         }
@@ -2610,7 +2653,7 @@
         text-align: center;
         border-bottom: 1px solid rgb(62, 56, 56);
         .intro3-image{
-           
+    
             img{
                 width: 90vw;
             }
@@ -2622,6 +2665,7 @@
         .intro3-text{
             color: white;
             margin-bottom: 50px ;
+          
             span{
                 color: $Peachpurple-color;
     
