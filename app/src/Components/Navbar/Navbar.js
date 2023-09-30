@@ -13,11 +13,9 @@ function Navbar( props) {
 
 
 
-  const {display,show,hide}=props
-  
-  console.log(props.show)
+ 
 
-  function showNavbar(props){
+  function showNavbar(){
     navRef.current.classList.toggle("reponsive");
   
 
@@ -27,7 +25,7 @@ function Navbar( props) {
   }
   
 
-  function removeNavbar(props){
+  function removeNavbar(){
     navRef.current.classList.remove("reponsive");
   
    
@@ -55,7 +53,7 @@ function Navbar( props) {
         <HashLink   onClick={removeNavbar} className="link" to="/contact">Contact</HashLink>
 
         <Link to="/register">
-        <button className="register">Register</button>
+        <button  onClick={removeNavbar}className="register">Register</button>
         </Link>
       
 

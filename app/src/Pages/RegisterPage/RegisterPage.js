@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-
-import Navbar from "../../Components/Navbar/Navbar";
 import "./RegisterPage.scss";
 import { ReactComponent as GraphiCDesigner } from "../../SVGComponents/3d-graphic-designer-showing-thumbs-up-png 1.svg";
 import { ReactComponent as Congratulations } from "../../SVGComponents/congratulation.svg";

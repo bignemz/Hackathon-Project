@@ -2,8 +2,6 @@ import React from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import axiosInstance from "../../hooks/axiosInstance";
-
-import Navbar from "../../Components/Navbar/Navbar";
 import { ReactComponent as Instagram } from "../../SVGComponents/Instagram.svg";
 import { ReactComponent as XVector } from "../../SVGComponents/XVector.svg";
 import { ReactComponent as Facebook } from "../../SVGComponents/Facebook.svg";

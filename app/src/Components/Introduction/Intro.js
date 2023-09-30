@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Intro.scss'
 import {motion, useAnimation} from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import { Link  } from 'react-router-dom'
 
 const Intro = ()=> {
 
@@ -84,7 +85,12 @@ const Intro = ()=> {
           
              className='intro-text2'>
                 <p>Participate in getlinked tech Hackathon 2023 stand  a chance to win a Big prize</p>
-                <button className='register'>Register</button>
+             
+
+                <Link to="/register"><button  className='register'>Register</button>
+                </Link> 
+
+
             </div>
             <div className='intro-time'><span>{Hour}</span>H<span>{Minute}</span>M  <span>{Second}</span>S  </div>
         </motion.div>
@@ -177,7 +183,8 @@ const Intro = ()=> {
             <p><span>Technical Complexity: </span>Evaluate the technical sophistication of the solution. Judges would consider the complexity of the code, the use of advanced technologies or algorithms, and the scalability of the solution.</p>
             <p><span>Adherence to Hackathon Rules:</span> Judges will Ensure that the team adhered to the rules and guidelines of the hackathon, including deadlines, use of specific technologies or APIs, and any other competition-specific requirements.</p>
 
-            <button className='register'>Register</button>
+            <Link to="/register"><button  className='register'>Register</button>
+         </Link> 
             
          </motion.div>
     </section>
