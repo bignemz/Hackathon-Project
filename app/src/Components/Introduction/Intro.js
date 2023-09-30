@@ -11,10 +11,7 @@ const Intro = ()=> {
         hidden:{ opacity:1, scale:0 }
       }
 
-      const sizeVariant={
-        visible:{ opacity:1, scale:1,transition:{duration: 0.3 ,delay:0.5} },
-        hidden:{ opacity:1, scale:0 }
-      }
+    
 
       const slideVariant={
         visible:{   initial:{y:1000} ,animate:{y:0}, transition:{duration:1,delay:0.5}}
